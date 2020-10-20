@@ -1,0 +1,147 @@
+
+.chat_box {
+    display: flex;
+    flex-direction: column;
+    align-content: end;
+    justify-content: end;
+    height: 92%;
+    background: rgb(14,22,33);
+    padding-left: 3px;
+}
+
+.chat_form_input {
+    display: flex;
+    flex-direction: row;
+    justify-self: end;
+    align-self: end;
+    width: 99.5%;
+    background: rgb(23,33,43);
+    height: 10%;
+}
+
+.chat_form_input > button > img {
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+.chat_form_input > textarea {
+    width: 100%;
+    height: 50%;
+    resize: none;
+    overflow: hidden;
+    border-radius: 0;
+    margin: 0;
+}
+
+.chat_form_input > button {
+    border: none;
+    justify-self: right;
+    margin: 0;
+    padding: 7px;
+    background: rgb(43,82,120);
+}
+
+.chat_form_input > button:hover {
+
+}
+
+.chat_form_input > button:hover > img {
+    background: none;
+    border-radius: 150px;
+    transition: 0.2s;
+}
+
+.chat_messages {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 90%;
+    align-items: end;
+}
+
+.message {
+    border-radius: 10px;
+    padding: 7px;
+    margin: 5px 10px;
+}
+
+.message > .time {
+    display: flex;
+    font-size: 12px;
+    margin: 5px;
+    flex-direction: row-reverse;
+    opacity: 0.5;
+}
+
+.message_enemy {
+    background-color: rgb(24,37,51);
+    display: flex;
+    flex-direction: column;
+    color: whitesmoke;
+}
+
+.message_yours > p {
+    margin: 4px 0;
+    color: lightskyblue;
+}
+.message_enemy > p .message_yours > p {
+    overflow: scroll;
+    max-width: min-content;
+}
+
+.message_yours {
+    background-color: rgb(43,82,120);
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    color: whitesmoke;
+}
+
+.message_block {
+    display: flex;
+    flex-direction: row;
+}
+
+.message_block > img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    border: 1px solid black;
+}
+
+.chats_item > img.self {
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    margin-right: 5px;
+}
+
+audio {
+    opacity: 0.6;
+    height: 2rem;
+}
+
+audio.enemy_audio::-webkit-media-controls-panel {
+    background-color: rgb(24,37,51);
+}
+
+audio.you_audio::-webkit-media-controls-panel {
+    background-color: rgb(43,82,120);
+}
+
+audio:focus {
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+}
+
+.smiles > img {
+    max-width: 30%;
+    max-height: 30%;
+}
+
+.smiles {
+    font-family: 'NotoColorEmoji', serif;
+}

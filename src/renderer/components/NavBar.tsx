@@ -1,18 +1,29 @@
-import React from "react";
-import MenuLogo from "@/assets/menu.svg"
+import React, {PropsWithChildren} from "react";
+import {CommunityItem} from "@/components/CommunityItem";
+import {connect} from "react-redux";
 
-const NavBar = () => {
-    return(
+interface appRedux {
+    loading: Boolean,
+    community: []
+}
+
+const NavBar = ({community}: PropsWithChildren<appRedux>) => {
+    return (
         <React.Fragment>
-            <input type="checkbox" id={"nav-check"} className={"sidebar-open"}/>
-            <nav>
-                <label htmlFor="nav-check"><img src={MenuLogo} alt="menu"/></label>
-            </nav>
-            <div className="sidenav">
-
-            </div>
+            {community.length > 0 ? community.map((item: {
+                latestActivityTime: string;
+                name: string, ndcId: number, icon: string }) => {
+                return <CommunityItem key={item.name} icon={item.icon} name={item.name} ndcId={item.ndcId}/>
+            }) : <p className={"alert"}>Нету</p>}
         </React.Fragment>
     )
 }
+const mapCommunity = (state: {
+    community: any;
+    app: { isLoading: Boolean; error: string, community: any };
+}) => ({
+    loading: state.app.isLoading,
+    community: state.community.list
+})
 
-export default NavBar
+export default connect(mapCommunity)(NavBar)

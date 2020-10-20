@@ -1,67 +1,10 @@
-body {
-    margin: 0;
-    background: right bottom / 30% no-repeat url('../assets/chibi-bg.png'), left top / 30%  no-repeat url("../assets/kik-bg.png");
-}
-
-.main {
-    display: flex;
-    align-self: center;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
 
 .form1 {
     display: flex;
     align-items: center;
     flex-direction: column;
+    align-self: center;
     background: inherit;
-    justify-content: space-between;
-    margin-top: 100px;
-    width: 350px;
-    border-radius: 10px;
-}
-
-button {
-    appearance: none;
-    -webkit-appearance: none;
-    padding: 10px;
-    border: 1px solid black;
-    background-color: inherit;
-    font-weight: 600;
-    border-radius: 10px;
-    margin: 20px;
-    transition: 0.5s;
-
-}
-
-button:hover {
-    background: cornflowerblue;
-}
-
-button:focus {
-    appearance: none;
-    -webkit-appearance: none;
-    outline: none;
-
-}
-
-.input {
-    background-color: inherit;
-    border: 0;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
-    transition: .3s box-shadow;
-    margin-top: 0.5rem;
-    padding: 0.7rem;
-    border-radius: 10px;
-}
-
-.input:hover {
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
-}
-
-.input:focus {
-    outline: none;
-    transition: .3s box-shadow;
-    box-shadow: 0 0 10px black;
+    justify-self: center;
+    margin-top: 20%;
 }

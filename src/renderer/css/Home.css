@@ -1,12 +1,87 @@
-nav {
-    height: 3rem;
-    background: ghostwhite;
-    width: 100%;
+body {
+    background: rgb(14,22,33);
     padding: 0;
     margin: 0;
 }
 
-body {
-    padding: 0;
-    margin: 0;
+.main {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 70px 1fr 2fr;
+    grid-template-rows: 100%;
+    grid-column-gap: 1px;
+    grid-template-areas:
+    "sidenav side body";
+
+}
+
+.side {
+    grid-area: side;
+    background-color: rgb(23,33,43);
+    display: flex;
+    flex-direction: column;
+}
+
+.body {
+    grid-area: body;
+    background-color: rgb(23,33,43);
+
+}
+
+.sidenav {
+    grid-area: sidenav;
+    background-color: rgb(23,33,43);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+}
+
+.alert {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 50%;
+    font-size: 0.85rem;
+    color: gray;
+}
+
+.community-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 3px;
+    width: 55px;
+    height: 55px;
+}
+
+.community-item > img {
+    width: 55px;
+    height: 55px;
+    border-radius: 7px;
+    transition: 0.3s;
+}
+
+.community-item:hover > img {
+    opacity: 0.8;
+    transition: 0.3s;
+    background:#000;
+}
+
+.community-item_title {
+    position: absolute;
+    display: none;
+    left: 3rem;
+    padding: 1%;
+    margin-left: 1rem;
+    background: rgb(43,82,120);
+    border-radius: 10px;
+    color: whitesmoke;
+    z-index: 1;
+}
+
+.community-item:hover > .community-item_title {
+    position: absolute;
+    display: flex;
 }

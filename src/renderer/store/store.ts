@@ -6,13 +6,15 @@ import {communityReducer} from "@/store/reducers/communityReducer";
 import {chatsReducer} from "@/store/reducers/chatsReducer";
 import {chatReducer} from "@/store/reducers/chatReducer";
 import thunk from "redux-thunk";
+import {appReducer} from "@/store/reducers/appReducer";
 
 const createRootReducer = (history: any) => combineReducers({
     router: connectRouter(history),
     account: accountReducer,
     community: communityReducer,
     chats: chatsReducer,
-    chat: chatReducer
+    chat: chatReducer,
+    app: appReducer
 })
 
 export const history = createBrowserHistory()

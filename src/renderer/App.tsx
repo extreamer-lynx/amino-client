@@ -4,6 +4,7 @@ import { Provider } from 'react-redux'
 import { ConnectedRouter } from 'connected-react-router'
 import store, { history } from './store/store'
 import Routes from "./routes";
+import "./App.css"
 
 setConfig({
   showReactDomPatchNotification: false
